@@ -35,9 +35,9 @@ np.random.seed(0)
 
 p = 3 # Number of variables.
 
-#n = 100 # Number of points.
+n = 100 # Number of points.
 
-n = 5
+# n = 5
 
 x_max = 100 # x values assumed to be between 0 and  x_max.
 
@@ -59,7 +59,7 @@ for i in range(n):
     for j in range(1,p+1):
         X[i,j] = random.randint(0, x_max+1, size=1)
 
-print(X)
+# print(X)
 
 
 # In[4]:
@@ -87,13 +87,13 @@ print(a)
 
 
 # Generate the y values.
-rand_max = 10
+rand_max = 100
 rand_array = np.random.rand(n) # n random floating point numbers between 0 and 1.
 rand_array = rand_max*(2*rand_array -1)  # n random floating point numbers between -rand_max and rand_max.
-print(rand_array)
+# print(rand_array)
 
 y = np.dot(X, a) + rand_array
-print(y)
+# print(y)
 
 
 # In[7]:
