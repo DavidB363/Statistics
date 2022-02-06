@@ -13,7 +13,7 @@
 # In[1]:
 
 
-# A population has mean mean_pop for a particular continuos variable.
+# A population has mean mean_pop for a particular continuous variable.
 # The standard deviation of the population is unknown.
 # Given a sample of continuous data, can one determine whether it is likely
 # to have come from the population?
