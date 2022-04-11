@@ -16,6 +16,9 @@
 # In a one-factor experiment, measurements or observations are obtained for a independent groups of 
 # samples, where the number of measurements in each group is b. We speak of a treatments, each of which
 # has b repetitions or replications.
+# 
+# Note that the independent variable is the factor - a categorical variable, whose values are the groups (e.g. A, B, C). 
+# The dependent variable is the continuous variable which takes on the values of the measurements in each group.
 
 # Example: The yield in bushels per acre of a certain variety of wheat grown in a particular 
 #     type of soil treated with chemicals A, B, or C is given in the numpy array x.
@@ -172,10 +175,11 @@ f_99 = f.ppf(0.99, dof1, dof2)
 print(f_99)
 
 
+# # Performing ANOVA One Factor Test with SciPy.stats Library
+
 # In[15]:
 
 
-# Performing ANOVA One Factor Test with SciPy.stats Library
 
 from scipy import stats
 results = stats.f_oneway(*x)
