@@ -58,22 +58,13 @@ print((a,b))
 # In[4]:
 
 
-fert_index = fertilizer.index('C')
-crop_index = crop.index('crop_IV')
-
-print(x[fert_index, crop_index])
-
-
-# In[5]:
-
-
 # Find the fertilizer (row) means.
 
 x_row_mean = np.mean(x, axis=1)
 print(x_row_mean)
 
 
-# In[6]:
+# In[5]:
 
 
 # Find the crop (column) means.
@@ -82,7 +73,7 @@ x_col_mean = np.mean(x, axis=0)
 print(x_col_mean)
 
 
-# In[7]:
+# In[6]:
 
 
 # Find the grand mean.
@@ -91,7 +82,7 @@ x_grand_mean = np.mean(x)
 print(x_grand_mean)
 
 
-# In[8]:
+# In[7]:
 
 
 # Find the total variation.
@@ -102,7 +93,7 @@ for el in np.nditer(x):
 print(v)
 
 
-# In[9]:
+# In[8]:
 
 
 # Find the variation between fertilizers (rows).
@@ -114,7 +105,7 @@ v_r *= b
 print(v_r)
 
 
-# In[10]:
+# In[9]:
 
 
 # Find the variation between crops (columns).
@@ -126,7 +117,7 @@ v_c *= a
 print(v_c)
 
 
-# In[11]:
+# In[10]:
 
 
 # Find the variation due to error (rows).
@@ -140,7 +131,7 @@ for el, m1, m2 in np.nditer([x, x_row_mean.reshape(a,1), x_col_mean.reshape(1,b)
 print(v_e)
 
 
-# In[12]:
+# In[11]:
 
 
 # A quick way to work out the variation due to error is as follows.
@@ -154,7 +145,7 @@ print(v_e)
 # H0(1): The fertilizer (row) means are equal.   \
 # H0(1): The crop (column) means are equal.     
 
-# In[13]:
+# In[12]:
 
 
 # Find an unbiased estimate of the population variance using: 
@@ -167,7 +158,7 @@ var_e = v_e/((a-1)*(b-1))
 print(var_e)
 
 
-# In[14]:
+# In[13]:
 
 
 # Find an unbiased estimate of the population variance using: 
@@ -178,7 +169,7 @@ var_r = v_r/(a-1)
 print(var_r)
 
 
-# In[15]:
+# In[14]:
 
 
 # Find an unbiased estimate of the population variance using: 
@@ -189,7 +180,7 @@ var_c = v_c/(b-1)
 print(var_c)
 
 
-# In[16]:
+# In[15]:
 
 
 # Find an unbiased estimate of the population variance using: 
@@ -200,7 +191,7 @@ var = v/(a*b-1)
 print(var)
 
 
-# In[17]:
+# In[16]:
 
 
 # Under the null hypothesis H0(1) of equal fertilizer (row) means the statistic
@@ -212,7 +203,7 @@ F1 = var_r/var_e
 print(F1)
 
 
-# In[18]:
+# In[17]:
 
 
 # To find the p value it is necessary to calculate areas
@@ -233,7 +224,7 @@ print('p_value = ', 1 - f.cdf(abs(f_stat), dof1, dof2))
 # The fertilizer (row) means are not equal, and there is a difference in yield   \
 # due to the fertilizers used.
 
-# In[19]:
+# In[18]:
 
 
 # Under the null hypothesis H0(2) of equal crop (column) means the statistic
@@ -245,7 +236,7 @@ F2 = var_c/var_e
 print(F2)
 
 
-# In[20]:
+# In[19]:
 
 
 # Calculate the corresponding p value.
@@ -264,20 +255,20 @@ print('p_value = ', 1 - f.cdf(abs(f_stat), dof1, dof2))
 
 # # Performing ANOVA Two Factor Test with statsmodels.api Library
 
-# In[21]:
+# In[20]:
 
 
 # Note that the scipy library does not appear to have a Two Factor ANOVA function.
 
 
-# In[22]:
+# In[21]:
 
 
 import numpy as np
 import pandas as pd
 
 
-# In[23]:
+# In[22]:
 
 
 # Create a dataframe.
@@ -286,7 +277,7 @@ df = pd.DataFrame(columns = ['Fertilizer', 'Crop', 'Yield'])
 print(df)
 
 
-# In[24]:
+# In[23]:
 
 
 # Populate the dataframe with data from numpy array x.
@@ -297,7 +288,7 @@ for findex in range(len(fertilizer)):
 print(df)       
 
 
-# In[25]:
+# In[24]:
 
 
 # Importing libraries.
