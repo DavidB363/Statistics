@@ -24,6 +24,18 @@
 #     type of soil treated with chemicals A, B, or C is given in the numpy array x.
 #     Note that a=3 and b=4 in this case.
 
+# (Theory and examples taken from the book Probability and Statistics - Schaum's Outline Series).
+
+# ANOVA test assumptions:
+# 
+# The ANOVA test has important assumptions that must be satisfied in order for the associated p-value to be valid.
+# 
+# The samples are independent.
+# 
+# Each sample is from a normally distributed population.
+# 
+# The population standard deviations of the groups are all equal. This property is known as homoscedasticity.
+
 # In[1]:
 
 
