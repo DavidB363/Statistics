@@ -132,7 +132,7 @@ print('df = ', df)
 
 # To calculate the p value, the easiest way is to use the scipy library.
 # scipy.stats.chisquare calculates the chi square statistic and p value.
-# Note that the number of degrees of freedom in numevents-1.
+# Note that the number of degrees of freedom is numevents-1.
 
 from scipy.stats import chisquare
 chisq, p = chisquare(eventcounts, f_exp = expectedcounts)

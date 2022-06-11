@@ -34,7 +34,7 @@
 
 # corresponding to sample 1.
 # The sampling distribution is symmetric, and it is possible to show that the
-# mean and variance if the distribution of U is given by:
+# mean and variance of the distribution of U is given by:
 
 
 # $\mu_U = \frac{N_1 N_2}{2}$ and $\sigma_U^2=\frac{N_1N_2(N_1+N_2+1)}{12}$
