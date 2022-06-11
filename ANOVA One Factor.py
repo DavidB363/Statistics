@@ -84,7 +84,6 @@ v = 0.0
 for el in np.nditer(x):
     v += (el-x_grand_mean)**2
 print(v)
-     
 
 
 # In[7]:
