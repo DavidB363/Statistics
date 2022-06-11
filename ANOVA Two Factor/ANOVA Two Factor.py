@@ -143,7 +143,7 @@ print(v_e)
 
 # There are two hypotheses that we may want to test   \
 # H0(1): The fertilizer (row) means are equal.   \
-# H0(1): The crop (column) means are equal.     
+# H0(2): The crop (column) means are equal.     
 
 # In[12]:
 
@@ -250,8 +250,7 @@ print('p_value = ', 1 - f.cdf(abs(f_stat), dof1, dof2))
 
 
 # At the 0.05 level of signicance H0(2) cannot be rejected (since 0.512 > 0.05).
-# The crop (column) means are equal, and there is a no difference in yield   \
-# due to the crops used.
+# The crop (column) means are equal, and there is no difference in yield due to the crops used.
 
 # # Performing ANOVA Two Factor Test with statsmodels.api Library
 
